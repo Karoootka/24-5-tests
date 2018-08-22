@@ -1,10 +1,14 @@
 const calculateStylePoints = (styleNotes) => {
-  let sum;
+  let points;
+
   if (styleNotes.length === 5) {
     const min = Math.min(...styleNotes);
     const max = Math.max(...styleNotes);
-    sum = (styleNotes.reduce((acc, curr) => acc + curr, 0)) - min - max;
-    return sum;
+
+    points = (styleNotes.reduce((acc, curr) => acc + curr, 0)) - min - max;
+
+    return points;
+    
   } else {
     return `Wrong notes`;
   }
